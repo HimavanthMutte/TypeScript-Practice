@@ -1,7 +1,7 @@
 # TypeScript Hands-on Practice — Product Catalog
 
 **Level:** Intermediate  
-**Focus:** Practical TypeScript, type safety, arrays, functions, union types, and object grouping  
+**Focus:** Practical TypeScript, type safety, arrays, functions, union types, object grouping, and generics  
 **Format:** Interview-style challenges — one task at a time
 
 ## Challenge 1 — Product Catalog
@@ -13,7 +13,7 @@ Implement a small product catalog in TypeScript. Your solution should demonstrat
 ### Requirements
 
 1. Define the necessary types for a product.
-2. Implement different functions whihch returns 
+2. Implement a function that returns all products matching a given condition.
 3. Handle optional product information appropriately.
 4. Demonstrate your implementation with sample data.
 
@@ -69,6 +69,35 @@ Compare `Map<Category, Product[]>` with `Record<Category, Product[]>`. Both can 
 
 ---
 
+## Challenge 4 — Generic `getFirstElement`
+
+Implement a generic function named `getFirstElement` that accepts an array and returns its first element.
+
+### Requirements
+
+- The function must work with arrays of different element types.
+- Preserve the element type in the return type.
+- Do not use `any`.
+- Return `undefined` when the array is empty.
+- Demonstrate the function with at least two different array types.
+
+### Follow-up 4 — Remove Unnecessary Restrictions
+
+Revise the function so it works with **any element type**, including objects, without using `any`, `typeof` checks, or type assertions.
+
+Demonstrate it with:
+- A number array
+- A string array
+- An array of objects
+
+Keep the same behavior for empty arrays.
+
+### Reflection
+
+Think about what the generic type parameter represents, when a constraint such as `T extends number | string` is useful, and why a simple generic `T[]` can support more cases.
+
+---
+
 ## Concepts Practiced
 
 - Object and type definitions
@@ -79,3 +108,4 @@ Compare `Map<Category, Product[]>` with `Record<Category, Product[]>`. Both can 
 - Nullable return values
 - Type-safe indexing
 - `Record` versus `Map`
+- Generic type parameters and constraints

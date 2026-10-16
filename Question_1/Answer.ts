@@ -53,6 +53,12 @@ function groupProductsByCategory(): Record<Category, Product[]> {
     return groupedProducts;
 }
 
+function getFirstElement<T extends number | string>( arr: T[]): T | undefined {
+    if (arr) {
+        return arr[0];
+    }
+}
+
 console.log(getProductsByCategory("Electronics"));
 
 console.log(getProductById(3));
