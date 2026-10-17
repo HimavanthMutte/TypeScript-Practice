@@ -18,7 +18,7 @@ console.log(getElement([true, false], 1));
 const obj = {
     id: 1,
     name: "himu",
-    age: 21
+    age: 21,
 };
 function getProperty(obj, key) {
     if (key in obj)
@@ -35,6 +35,6 @@ function getFirstElement(arr) {
     return arr[0];
 }
 console.log(getFirstElement([1, 2, 3]));
-console.log(getFirstElement(['a', 'b']));
+console.log(getFirstElement(["a", "b"]));
 console.log(getFirstElement([]));
 export {};
